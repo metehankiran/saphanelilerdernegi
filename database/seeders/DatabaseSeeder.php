@@ -18,5 +18,9 @@ class DatabaseSeeder extends Seeder
             'email' => 'root@saphanelilerdernegi.test',
             'password' => bcrypt('123123123'),
         ]);
+
+        $this->call([
+            AnnouncementTypeSeeder::class,
+        ]);
     }
 }
