@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('instagram')->nullable();
             $table->timestamps();
         });
-    }
+    }w
 
     /**
      * Reverse the migrations.
