@@ -1,37 +1,81 @@
 <?php
 
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CorporateController;
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TestController;
+use Barryvdh\Debugbar\DataCollector\EventCollector;
 use Illuminate\Support\Facades\Route;
 
-Route::get('test', [TestController::class, 'index']);
+// Route::get('test', [TestController::class, 'index']);
 
-Route::get('/', [HomeController::class, 'index'])->name('home.index');
-Route::get('/about', [HomeController::class, 'about'])->name('home.about');
-Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
-Route::post('/contact', [HomeController::class, 'sendContact'])->name('home.contact.post');
+// Home
+Route::prefix('/')->name('home.')->group(function () {
+    Route::get('/', [HomeController::class, 'index'])->name('index');
+    Route::get('/kimlik-dogrulama', [HomeController::class, 'authentications'])->name('authentication');
+});
+
+// Category
+Route::prefix('kategori')->name('category.')->group(function () {
+    Route::get('/', [CategoryController::class, 'index'])->name('index');
+    Route::get('/{id?}', [CategoryController::class, 'show'])->name('show');
+});
+
+// Corporate
+Route::prefix('kurumsal')->name('corporate.')->group(function () {
+    Route::get('/hakkimizda', [CorporateController::class, 'about'])->name('about');
+    Route::get('/referanslar', [CorporateController::class, 'testimonials'])->name('testimonials');
+    Route::get('/gizlilik-politikasi', [CorporateController::class, 'privacy'])->name('privacy');
+    Route::get('/kullanim-kosullari', [CorporateController::class, 'terms'])->name('terms');
+    Route::get('/sikca-sorulan-sorular', [CorporateController::class, 'faq'])->name('faq');
+    Route::get('/kurucular', [CorporateController::class, 'founders'])->name('founders');
+});
+
+// Contact
+Route::prefix('iletisim')->name('contact.')->group(function () {
+    Route::get('/', [ContactController::class, 'index'])->name('index');
+    Route::post('/', [ContactController::class, 'store'])->name('post');
+});
 
 // Project
-Route::get('/projects', [HomeController::class, 'project'])->name('home.project');
-Route::get('/projects/{id?}', [HomeController::class, 'projectDetail'])->name('home.project.show');
+Route::prefix('projeler')->name('project.')->group(function () {
+    Route::get('/', [ProjectController::class, 'index'])->name('index');
+    Route::get('/{id?}', [ProjectController::class, 'show'])->name('show');
+});
 
-// Services
-Route::get('/services', [HomeController::class, 'service'])->name('home.service');
-Route::get('/services/{id?}', [HomeController::class, 'serviceDetail'])->name('home.service.show');
+// Service
+Route::prefix('hizmetler')->name('service.')->group(function () {
+    Route::get('/', [ServiceController::class, 'index'])->name('index');
+    Route::get('/{id?}', [ServiceController::class, 'show'])->name('show');
+});
 
-Route::get('/faq', [HomeController::class, 'faq'])->name('home.faq');
-Route::get('/founders', [HomeController::class, 'founders'])->name('home.founders');
+// Event
+Route::prefix('etkinlikler')->name('event.')->group(function () {
+    Route::get('/', [EventController::class, 'index'])->name('index');
+    Route::get('/{id?}', [EventController::class, 'show'])->name('show');
+});
 
-Route::get('/events', [HomeController::class, 'events'])->name('home.events');
-Route::get('/events/{id?}', [HomeController::class, 'eventDetail'])->name('home.events.show');
+// Blog
+Route::prefix('blog')->name('blog.')->group(function () {
+    Route::get('/', [BlogController::class, 'index'])->name('index');
+    Route::get('/{id?}', [BlogController::class, 'show'])->name('show');
+});
 
-Route::get('/category/{id?}', [HomeController::class, 'category'])->name('home.category.show');
-Route::get('/authentications', [HomeController::class, 'authentications'])->name('home.authentications');
-Route::get('testimonials', [HomeController::class, 'testimonials'])->name('home.testimonials');
+// Gallery
+Route::prefix('galeri')->name('gallery.')->group(function () {
+    Route::get('/{type}', [GalleryController::class, 'index'])->name('index');
+    Route::get('/{type}/{id?}', [GalleryController::class, 'show'])->name('show');
+});
 
-Route::get('/404', [HomeController::class, 'notFound'])->name('home.notFound');
-Route::get('/privacy-policy', [HomeController::class, 'privacyPolicy'])->name('home.privacyPolicy');
-Route::get('/terms-and-conditions', [HomeController::class, 'termsAndConditions'])->name('home.termsAndConditions');
-
-Route::get('/blogs', [HomeController::class, 'blogs'])->name('home.blogs');
-Route::get('/blogs/{id?}', [HomeController::class, 'blogDetail'])->name('home.blogs.show');
+// Newsletter
+Route::prefix('bulten')->name('newsletter.')->group(function () {
+    Route::post('/', [NewsletterController::class, 'store'])->name('store');
+    Route::get('/iptal/{token}', [NewsletterController::class, 'unsubscribe'])->name('unsubscribe');
+});

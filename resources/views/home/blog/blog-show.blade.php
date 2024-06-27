@@ -6,7 +6,7 @@
         <div class="uni-banner-text-area">
             <h1>Blog Details</h1>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="{{ route('home.index') }}">Home</a></li>
                 <li>Blog Details</li>
             </ul>
         </div>
@@ -44,9 +44,9 @@
                     <div class="tag-area">
                         <ul>
                             <li><i class="fas fa-tags"></i></li>
-                            <li><a href="category.html">Culture,</a></li>
-                            <li><a href="category.html">Business,</a></li>
-                            <li><a href="category.html">Citizen</a></li>
+                            <li><a href="{{ route('category.index') }}">Culture,</a></li>
+                            <li><a href="{{ route('category.index') }}">Business,</a></li>
+                            <li><a href="{{ route('category.index') }}">Citizen</a></li>
                         </ul>
                     </div>
                     <div class="social-icons">
@@ -69,13 +69,13 @@
                         <img src="assets/images/feedback/f2.jpg" alt="image">
                         <h5>David Makel</h5>
                         <p>The bee's knees bite your arm off bits and bobs he nicked it gosh gutted mate blimey, old off his nut argy bargy vagabond buggered dropped.</p>
-                        <a href="blog-details.html#bd-form">Reply</a>
+                        <a href="{{ route('blog.show') }}#bd-form">Reply</a>
                     </div>
                     <div class="comment-card">
                         <img src="assets/images/feedback/f1.jpg" alt="image">
                         <h5>Jemmy Makel</h5>
                         <p>The bee's knees bite your arm off bits and bobs he nicked it gosh gutted mate blimey, old off his nut argy bargy vagabond buggered dropped.</p>
-                        <a href="blog-details.html#bd-form">Reply</a>
+                        <a href="{{ route('blog.show') }}#bd-form">Reply</a>
                     </div>
                 </div>
                 <div class="bd-form details-text-area" id="bd-form">
@@ -118,47 +118,47 @@
                     <div class="sidebar-card sidebar-category mt-30">
                         <h3>Categories</h3>
                         <ul>
-                            <li><a href="blog-details.html"><i class="fas fa-angle-right"></i> Adveresting
+                            <li><a href="{{ route('blog.show') }}"><i class="fas fa-angle-right"></i> Adveresting
                                     Permits</a></li>
-                            <li><a href="blog-details.html"><i class="fas fa-angle-right"></i> Animal Health And
+                            <li><a href="{{ route('blog.show') }}"><i class="fas fa-angle-right"></i> Animal Health And
                                     Welfare</a></li>
-                            <li><a href="blog-details.html"><i class="fas fa-angle-right"></i> Animal Health And
+                            <li><a href="{{ route('blog.show') }}"><i class="fas fa-angle-right"></i> Animal Health And
                                     Welfare</a></li>
-                            <li><a href="blog-details.html"><i class="fas fa-angle-right"></i> Drainage Services</a>
+                            <li><a href="{{ route('blog.show') }}"><i class="fas fa-angle-right"></i> Drainage Services</a>
                             </li>
-                            <li><a href="blog-details.html"><i class="fas fa-angle-right"></i> Enviromental
+                            <li><a href="{{ route('blog.show') }}"><i class="fas fa-angle-right"></i> Enviromental
                                     Services</a></li>
-                            <li><a href="blog-details.html"><i class="fas fa-angle-right"></i> Survey Services</a>
+                            <li><a href="{{ route('blog.show') }}"><i class="fas fa-angle-right"></i> Survey Services</a>
                             </li>
                         </ul>
                     </div>
                     <div class="sidebar-card recent-news mt-30">
                         <h3>Popular Posts</h3>
                         <div class="recent-news-card">
-                            <a href="blog-details.html"><img src="assets/images/inner-images/bds1.jpg" alt="image"></a>
-                            <h5><a href="blog-details.html">Responds To Citizenship Advices</a></h5>
+                            <a href="{{ route('blog.show') }}"><img src="assets/images/inner-images/bds1.jpg" alt="image"></a>
+                            <h5><a href="{{ route('blog.show') }}">Responds To Citizenship Advices</a></h5>
                             <p>1st Sep 2024</p>
                         </div>
                         <div class="recent-news-card">
-                            <a href="blog-details.html"><img src="assets/images/inner-images/bds2.jpg" alt="image"></a>
-                            <h5><a href="blog-details.html">Housing Advisers Program For Beginner</a></h5>
+                            <a href="{{ route('blog.show') }}"><img src="assets/images/inner-images/bds2.jpg" alt="image"></a>
+                            <h5><a href="{{ route('blog.show') }}">Housing Advisers Program For Beginner</a></h5>
                             <p>4th Sep 2024</p>
                         </div>
                         <div class="recent-news-card">
-                            <a href="blog-details.html"><img src="assets/images/inner-images/bds3.jpg" alt="image"></a>
-                            <h5><a href="blog-details.html">Responds To a National Reports</a></h5>
+                            <a href="{{ route('blog.show') }}"><img src="assets/images/inner-images/bds3.jpg" alt="image"></a>
+                            <h5><a href="{{ route('blog.show') }}">Responds To a National Reports</a></h5>
                             <p>2nd Sep 2024</p>
                         </div>
                     </div>
                     <div class="sidebar-card sidebar-tag mt-30">
                         <h3>Popular Tags</h3>
                         <ul>
-                            <li><a href="category.html">Councillor</a></li>
-                            <li><a href="category.html">Culture</a></li>
-                            <li><a href="category.html">Business</a></li>
-                            <li><a href="category.html">Citizen</a></li>
-                            <li><a href="category.html">Program</a></li>
-                            <li><a href="category.html">Support</a></li>
+                            <li><a href="{{ route('category.index') }}">Councillor</a></li>
+                            <li><a href="{{ route('category.index') }}">Culture</a></li>
+                            <li><a href="{{ route('category.index') }}">Business</a></li>
+                            <li><a href="{{ route('category.index') }}">Citizen</a></li>
+                            <li><a href="{{ route('category.index') }}">Program</a></li>
+                            <li><a href="{{ route('category.index') }}">Support</a></li>
                         </ul>
                     </div>
                 </div>

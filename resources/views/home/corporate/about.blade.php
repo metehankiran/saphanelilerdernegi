@@ -104,84 +104,84 @@
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
                     <div class="service-card">
                         <div class="service-card-img">
-                            <a href="https://templates.hibootstrap.com/medzo/default/service-detaisl.html"><img src="{{ asset('assets') }}/images/service/s1.jpg" alt="image"></a>
+                            <a href="{{ route('service.show') }}"><img src="{{ asset('assets') }}/images/service/s1.jpg" alt="image"></a>
                             <i class="flaticon-balance"></i>
                         </div>
                         <div class="service-card-text">
-                            <h4><a href="{{ route('home.service.show') }}">Salty And The Law</a></h4>
+                            <h4><a href="{{ route('service.show') }}">Salty And The Law</a></h4>
                             <p>Lorem ipsum dolor amet magna set dolor sit amet consectetur adipiscing do elite labore.
                             </p>
-                            <a class="read-more-btn" href="{{ route('home.service.show') }}">Read More</a>
+                            <a class="read-more-btn" href="{{ route('service.show') }}">Read More</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
                     <div class="service-card">
                         <div class="service-card-img">
-                            <a href="https://templates.hibootstrap.com/medzo/default/service-detaisl.html"><img src="{{ asset('assets') }}/images/service/s2.jpg" alt="image"></a>
+                            <a href="{{ route('service.show') }}"><img src="{{ asset('assets') }}/images/service/s2.jpg" alt="image"></a>
                             <i class="flaticon-delivery"></i>
                         </div>
                         <div class="service-card-text">
-                            <h4><a href="{{ route('home.service.show') }}">Travel & Immigration</a></h4>
+                            <h4><a href="{{ route('service.show') }}">Travel & Immigration</a></h4>
                             <p>Lorem ipsum dolor amet magna set dolor sit amet consectetur adipiscing do elite labore.
                             </p>
-                            <a class="read-more-btn" href="{{ route('home.service.show') }}">Read More</a>
+                            <a class="read-more-btn" href="{{ route('service.show') }}">Read More</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
                     <div class="service-card">
                         <div class="service-card-img">
-                            <a href="https://templates.hibootstrap.com/medzo/default/service-detaisl.html"><img src="{{ asset('assets') }}/images/service/s3.jpg" alt="image"></a>
+                            <a href="{{ route('service.show') }}"><img src="{{ asset('assets') }}/images/service/s3.jpg" alt="image"></a>
                             <i class="flaticon-portfolio"></i>
                         </div>
                         <div class="service-card-text">
-                            <h4><a href="{{ route('home.service.show') }}">Business Services</a></h4>
+                            <h4><a href="{{ route('service.show') }}">Business Services</a></h4>
                             <p>Lorem ipsum dolor amet magna set dolor sit amet consectetur adipiscing do elite labore.
                             </p>
-                            <a class="read-more-btn" href="{{ route('home.service.show') }}">Read More</a>
+                            <a class="read-more-btn" href="{{ route('service.show') }}">Read More</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
                     <div class="service-card">
                         <div class="service-card-img">
-                            <a href="https://templates.hibootstrap.com/medzo/default/service-detaisl.html"><img src="{{ asset('assets') }}/images/service/s5.jpg" alt="image"></a>
+                            <a href="{{ route('service.show') }}"><img src="{{ asset('assets') }}/images/service/s5.jpg" alt="image"></a>
                             <i class="flaticon-process"></i>
                         </div>
                         <div class="service-card-text">
-                            <h4><a href="{{ route('home.service.show') }}">Water Supply</a></h4>
+                            <h4><a href="{{ route('service.show') }}">Water Supply</a></h4>
                             <p>Lorem ipsum dolor amet magna set dolor sit amet consectetur adipiscing do elite labore.
                             </p>
-                            <a class="read-more-btn" href="{{ route('home.service.show') }}">Read More</a>
+                            <a class="read-more-btn" href="{{ route('service.show') }}">Read More</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
                     <div class="service-card">
                         <div class="service-card-img">
-                            <a href="https://templates.hibootstrap.com/medzo/default/service-detaisl.html"><img src="{{ asset('assets') }}/images/service/s6.jpg" alt="image"></a>
+                            <a href="{{ route('service.show') }}"><img src="{{ asset('assets') }}/images/service/s6.jpg" alt="image"></a>
                             <i class="flaticon-refuse"></i>
                         </div>
                         <div class="service-card-text">
-                            <h4><a href="{{ route('home.service.show') }}">Refuse Removal</a></h4>
+                            <h4><a href="{{ route('service.show') }}">Refuse Removal</a></h4>
                             <p>Lorem ipsum dolor amet magna set dolor sit amet consectetur adipiscing do elite labore.
                             </p>
-                            <a class="read-more-btn" href="{{ route('home.service.show') }}">Read More</a>
+                            <a class="read-more-btn" href="{{ route('service.show') }}">Read More</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
                     <div class="service-card">
                         <div class="service-card-img">
-                            <a href="https://templates.hibootstrap.com/medzo/default/service-detaisl.html"><img src="{{ asset('assets') }}/images/service/s7.jpg" alt="image"></a>
+                            <a href="{{ route('service.show') }}"><img src="{{ asset('assets') }}/images/service/s7.jpg" alt="image"></a>
                             <i class="flaticon-lightning"></i>
                         </div>
                         <div class="service-card-text">
-                            <h4><a href="{{ route('home.service.show') }}">Electricity Supply</a></h4>
+                            <h4><a href="{{ route('service.show') }}">Electricity Supply</a></h4>
                             <p>Lorem ipsum dolor amet magna set dolor sit amet consectetur adipiscing do elite labore.
                             </p>
-                            <a class="read-more-btn" href="{{ route('home.service.show') }}">Read More</a>
+                            <a class="read-more-btn" href="{{ route('service.show') }}">Read More</a>
                         </div>
                     </div>
                 </div>

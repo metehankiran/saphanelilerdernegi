@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'Anasayfa')
 @section('content')
 <section class="banner bg-f9fbfe">
     <div class="container-fluid">
@@ -71,45 +72,45 @@
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
                     <div class="service-card">
                         <div class="service-card-img">
-                            <a href="https://templates.hibootstrap.com/medzo/default/service-detaisl.html"><img
+                            <a href="{{ route('service.show') }}"><img
                                     src="{{ asset('assets') }}/images/service/s1.jpg" alt="image"></a>
                             <i class="flaticon-balance"></i>
                         </div>
                         <div class="service-card-text">
-                            <h4><a href="{{ route('home.service.show') }}">Salty And The Law</a></h4>
+                            <h4><a href="{{ route('service.show') }}">Salty And The Law</a></h4>
                             <p>Lorem ipsum dolor amet magna set dolor sit amet consectetur adipiscing do elite
                                 labore.</p>
-                            <a class="read-more-btn" href="{{ route('home.service.show') }}">Read More</a>
+                            <a class="read-more-btn" href="{{ route('service.show') }}">Read More</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
                     <div class="service-card">
                         <div class="service-card-img">
-                            <a href="https://templates.hibootstrap.com/medzo/default/service-detaisl.html"><img
+                            <a href="{{ route('service.show') }}"><img
                                     src="{{ asset('assets') }}/images/service/s2.jpg" alt="image"></a>
                             <i class="flaticon-delivery"></i>
                         </div>
                         <div class="service-card-text">
-                            <h4><a href="{{ route('home.service.show') }}">Travel & Immigration</a></h4>
+                            <h4><a href="{{ route('service.show') }}">Travel & Immigration</a></h4>
                             <p>Lorem ipsum dolor amet magna set dolor sit amet consectetur adipiscing do elite
                                 labore.</p>
-                            <a class="read-more-btn" href="{{ route('home.service.show') }}">Read More</a>
+                            <a class="read-more-btn" href="{{ route('service.show') }}">Read More</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
                     <div class="service-card">
                         <div class="service-card-img">
-                            <a href="https://templates.hibootstrap.com/medzo/default/service-detaisl.html"><img
+                            <a href="{{ route('service.show') }}"><img
                                     src="{{ asset('assets') }}/images/service/s3.jpg" alt="image"></a>
                             <i class="flaticon-portfolio"></i>
                         </div>
                         <div class="service-card-text">
-                            <h4><a href="{{ route('home.service.show') }}">Business Services</a></h4>
+                            <h4><a href="{{ route('service.show') }}">Business Services</a></h4>
                             <p>Lorem ipsum dolor amet magna set dolor sit amet consectetur adipiscing do elite
                                 labore.</p>
-                            <a class="read-more-btn" href="{{ route('home.service.show') }}">Read More</a>
+                            <a class="read-more-btn" href="{{ route('service.show') }}">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -172,11 +173,11 @@
                                 <li>Conference</li>
                                 <li>Oct 12, 2024</li>
                             </ul>
-                            <h4><a href="{{ route('home.events.show') }}">Annual Conference 2024</a></h4>
+                            <h4><a href="{{ route('event.show') }}">Annual Conference 2024</a></h4>
                             <p><i class="fas fa-map-marker-alt"></i> <a
                                     href="https://goo.gl/maps/QTg39qSWoB5fdndT7">At City Center, 27 Division
                                     Street, USA</a></p>
-                            <a class="read-more-btn" href="{{ route('home.events.show') }}">Read More</a>
+                            <a class="read-more-btn" href="{{ route('event.show') }}">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -188,11 +189,11 @@
                                 <li>Conference</li>
                                 <li>Apr 13, 2024</li>
                             </ul>
-                            <h4><a href="{{ route('home.events.show') }}">Negotiation In Government</a></h4>
+                            <h4><a href="{{ route('event.show') }}">Negotiation In Government</a></h4>
                             <p><i class="fas fa-map-marker-alt"></i> <a
                                     href="https://goo.gl/maps/QTg39qSWoB5fdndT7">At City Center, 27 Division
                                     Street, USA</a></p>
-                            <a class="read-more-btn" href="{{ route('home.events.show') }}">Read More</a>
+                            <a class="read-more-btn" href="{{ route('event.show') }}">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -204,11 +205,11 @@
                                 <li>Conference</li>
                                 <li>Apr 14, 2024</li>
                             </ul>
-                            <h4><a href="{{ route('home.events.show') }}">Annual Health Conference</a></h4>
+                            <h4><a href="{{ route('event.show') }}">Annual Health Conference</a></h4>
                             <p><i class="fas fa-map-marker-alt"></i> <a
                                     href="https://goo.gl/maps/QTg39qSWoB5fdndT7">At City Center, 27 Division
                                     Street, USA</a></p>
-                            <a class="read-more-btn" href="{{ route('home.events.show') }}">Read More</a>
+                            <a class="read-more-btn" href="{{ route('event.show') }}">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -479,7 +480,7 @@
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
                     <div class="blog-card">
                         <div class="blog-card-img">
-                            <a href="blog-details.html"><img src="{{ asset('assets') }}/images/blog/b1.jpg" alt="image"></a>
+                            <a href="{{ route('blog.show') }}"><img src="{{ asset('assets') }}/images/blog/b1.jpg" alt="image"></a>
                         </div>
                         <div class="blog-card-text-area">
                             <div class="blog-date">
@@ -489,17 +490,17 @@
                                     <li><i class="far fa-calendar-alt"></i> 01 Nov 2024</li>
                                 </ul>
                             </div>
-                            <h4><a href="blog-details.html">Responds To Citizens Advice</a></h4>
+                            <h4><a href="{{ route('blog.show') }}">Responds To Citizens Advice</a></h4>
                             <p>Lorem ipsum dolor amet magna set dolor sit amet consectetur adipiscing do elite
                                 labore.</p>
-                            <a class="read-more-btn" href="blog-details.html">Read More</a>
+                            <a class="read-more-btn" href="{{ route('blog.show') }}">Read More</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
                     <div class="blog-card">
                         <div class="blog-card-img">
-                            <a href="blog-details.html"><img src="{{ asset('assets') }}/images/blog/b2.jpg" alt="image"></a>
+                            <a href="{{ route('blog.show') }}"><img src="{{ asset('assets') }}/images/blog/b2.jpg" alt="image"></a>
                         </div>
                         <div class="blog-card-text-area">
                             <div class="blog-date">
@@ -509,17 +510,17 @@
                                     <li><i class="far fa-calendar-alt"></i> 02 Nov 2024</li>
                                 </ul>
                             </div>
-                            <h4><a href="blog-details.html">Housing Advisers Program</a></h4>
+                            <h4><a href="{{ route('blog.show') }}">Housing Advisers Program</a></h4>
                             <p>Lorem ipsum dolor amet magna set dolor sit amet consectetur adipiscing do elite
                                 labore.</p>
-                            <a class="read-more-btn" href="blog-details.html">Read More</a>
+                            <a class="read-more-btn" href="{{ route('blog.show') }}">Read More</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
                     <div class="blog-card">
                         <div class="blog-card-img">
-                            <a href="blog-details.html"><img src="{{ asset('assets') }}/images/blog/b3.jpg" alt="image"></a>
+                            <a href="{{ route('blog.show') }}"><img src="{{ asset('assets') }}/images/blog/b3.jpg" alt="image"></a>
                         </div>
                         <div class="blog-card-text-area">
                             <div class="blog-date">
@@ -529,10 +530,10 @@
                                     <li><i class="far fa-calendar-alt"></i> 03 Nov 2024</li>
                                 </ul>
                             </div>
-                            <h4><a href="blog-details.html">Respond To National Report</a></h4>
+                            <h4><a href="{{ route('blog.show') }}">Respond To National Report</a></h4>
                             <p>Lorem ipsum dolor amet magna set dolor sit amet consectetur adipiscing do elite
                                 labore.</p>
-                            <a class="read-more-btn" href="blog-details.html">Read More</a>
+                            <a class="read-more-btn" href="{{ route('blog.show') }}">Read More</a>
                         </div>
                     </div>
                 </div>

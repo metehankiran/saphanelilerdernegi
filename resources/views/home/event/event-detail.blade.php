@@ -5,7 +5,7 @@
         <div class="uni-banner-text-area">
             <h1>Event Details</h1>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="{{ route('home.index') }}">Home</a></li>
                 <li>Event Details</li>
             </ul>
         </div>
@@ -81,7 +81,7 @@
                         <div class="event-info-card">
                             <i class="fas fa-globe"></i>
                             <h5>Website:</h5>
-                            <span><a href="index.html">medzu.com</a></span>
+                            <span><a href="{{ route('home.index') }}">medzu.com</a></span>
                         </div>
                     </div>
                 </div>

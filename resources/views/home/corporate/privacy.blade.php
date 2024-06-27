@@ -3,10 +3,10 @@
 <section class="uni-banner">
     <div class="container">
         <div class="uni-banner-text-area">
-            <h1>Terms & Conditions</h1>
+            <h1>Privacy Policies</h1>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li>Terms & Conditions</li>
+                <li><a href="{{ route('home.index') }}">Home</a></li>
+                <li>Privacy Policies</li>
             </ul>
         </div>
     </div>
@@ -15,9 +15,9 @@
 
 <div class="terms ptb-100">
     <div class="container">
-        <h1>Overview</h1>
+        <h2>Overview</h2>
         <p>We may collect personal identification information from Users in a variety of ways, including, but not limited to, when Users visit our site, subscribe to the newsletter, fill out a form, and in connection with other activities, services,
-            features or <a href="index.html">resources</a> we make available on our Site. Users may be asked for, as appropriate, name, email address, mailing address, phone number, company name. We will collect personal <strong>identification</strong>                information from Users only if they voluntarily consent such information to us. Users can always refuse to supply personally identification information, except that it may prevent them from engaging in certain Site related activities.
+            features or <a href="{{ route('home.index') }}">resources</a> we make available on our Site. Users may be asked for, as appropriate, name, email address, mailing address, phone number, company name. We will collect personal <strong>identification</strong>                information from Users only if they voluntarily consent such information to us. Users can always refuse to supply personally identification information, except that it may prevent them from engaging in certain Site related activities.
         </p>
         <h5>General Permission To Use And Access And Use Limitations</h5>
         <p>This site is provided by <strong>Medzo</strong>. <strong>Medzo</strong> collects information in several ways from different parts of this site.</p>
@@ -27,7 +27,7 @@
             <li><span>3.</span> Next-day and Express delivery options also available.</li>
             <li><span>4.</span> See the delivery FAQs for details on shipping methods, costs and delivery times</li>
         </ul>
-        <h4>Confidential Information</h4>
+        <h3>Confidential Information</h3>
         <p>
             <Strong>Medzo</Strong> accepts the following payment methods:</p>
         <ul class="payment">

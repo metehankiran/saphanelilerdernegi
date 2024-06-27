@@ -5,7 +5,7 @@
         <div class="uni-banner-text-area">
             <h1>FAQ's</h1>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="{{ route('home.index') }}">Home</a></li>
                 <li>FAQ,s</li>
             </ul>
         </div>

@@ -6,7 +6,7 @@
             <img src="assets/images/error.png" alt="image">
             <h4>Sorry We Can`t Find That Page!</h4>
             <p>The page you are looking for was moved, removed, renamed or never existed.</p>
-            <a class="default-button" href="index.html">Take Me Home <i class="fas fa-angle-right"></i></a>
+            <a class="default-button" href="{{ route('home.index') }}">Take Me Home <i class="fas fa-angle-right"></i></a>
         </div>
     </div>
 </section>
