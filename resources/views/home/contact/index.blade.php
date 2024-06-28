@@ -52,7 +52,8 @@
                     </div>
                     <div class="col-lg-8">
                         <div class="contact-form-text-area">
-                            <form id="contactForm">
+                            <form id="contactForm" method="post" action="{{ route('contact.post') }}">
+                                @csrf
                                 <div class="row align-items-center">
                                     <div class="col-md-6 col-sm-6 col-12">
                                         <div class="form-group">
@@ -107,7 +108,6 @@
                                     </div>
                                     <div class="col-md-12 col-sm-12 col-12">
                                         <button class="default-button" type="submit"><span>Mesaj Gönder</span></button>
-                                        <div id="msgSubmit" class="h6 text-center hidden"></div>
                                         <div class="clearfix"></div>
                                     </div>
                                 </div>

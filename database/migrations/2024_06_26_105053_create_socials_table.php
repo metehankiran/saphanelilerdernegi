@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('url');
+            $table->string('icon');
             $table->boolean('enabled')->default(true);
             $table->boolean('new_window')->default(true);
             $table->boolean('nofollow')->default(true);

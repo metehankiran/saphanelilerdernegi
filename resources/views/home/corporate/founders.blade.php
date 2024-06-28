@@ -1,18 +1,7 @@
 @extends('layouts.app')
+@section('title', 'Kurucular')
 @section('content')
-
-<section class="uni-banner">
-    <div class="container">
-        <div class="uni-banner-text-area">
-            <h1>Our Councillors</h1>
-            <ul>
-                <li><a href="{{ route('home.index') }}">Home</a></li>
-                <li>Our Councillors</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
+<x-content.banner title="Kurucular" main="Anasayfa" sub="Kurucular" :href="route('home.index')" />
 
 <section class="team pt-70 pb-100">
     <div class="container">

@@ -1,16 +1,7 @@
 @extends('layouts.app')
+@section('title', 'Hakkımızda')
 @section('content')
-<section class="uni-banner">
-    <div class="container">
-        <div class="uni-banner-text-area">
-            <h1>About Us</h1>
-            <ul>
-                <li><a href="{{ route('home.index') }}">Home</a></li>
-                <li>About Us</li>
-            </ul>
-        </div>
-    </div>
-</section>
+<x-content.banner title="Hakkımızda" main="Anasayfa" sub="Hakkımızda" :href="route('home.index')" />
 
 
 <section class="about pt-100">

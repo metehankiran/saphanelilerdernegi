@@ -1,154 +1,37 @@
 @extends('layouts.app')
+@section('title', 'Referanslar')
 @section('content')
-
-<section class="uni-banner">
-    <div class="container">
-        <div class="uni-banner-text-area">
-            <h1>Client's Feedback</h1>
-            <ul>
-                <li><a href="{{ route('home.index') }}">Home</a></li>
-                <li>Feedback</li>
-            </ul>
-        </div>
-    </div>
-</section>
+<x-content.banner title="Referanslar" main="Anasayfa" sub="Referanslar" :href="route('home.index')" />
 
 
 <section class="testimonial pt-70 pb-100">
     <div class="container">
         <div class="row">
+            @foreach($feedbacks as $feedback)
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
                 <div class="feedback-card">
-                    <i class="flaticon-quotation"></i>
                     <div class="stars">
                         <ul>
+                            @for ($i = 0; $i < $feedback->rating; $i++)
                             <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
+                            @endfor
                         </ul>
                     </div>
-                    <p>Lorem ipsum dolor amet magna set dolor sit amet elite consectetur adipiscing do elite magna aliqua sit amet dolore adipiscing elite.</p>
+                    <p>{{ $feedback->message }}</p>
                     <div class="feedback-intro-area">
-                        <img src="assets/images/feedback/f1.jpg" alt="image">
+                        @if($feedback->image)
+                        <img src="{{ $feedback->image }}" alt="{{ $feedback->name }}">
+                        @else
+                        <img src="{{ asset('assets') }}/images/feedback/default-user.webp" style="max-width:50px" alt="{{ $feedback->name }}">
+                        @endif
                         <div class="feedback-intro">
-                            <h5>Jhon Abraham</h5>
-                            <span>City Council President</span>
+                            <h5>{{ $feedback->name }}</h5>
+                            <span>{{ $feedback->title }}</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
-                <div class="feedback-card">
-                    <i class="flaticon-quotation"></i>
-                    <div class="stars">
-                        <ul>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                        </ul>
-                    </div>
-                    <p>Lorem ipsum dolor amet magna set dolor sit amet elite consectetur adipiscing do elite magna aliqua sit amet dolore adipiscing elite.</p>
-                    <div class="feedback-intro-area">
-                        <img src="assets/images/feedback/f2.jpg" alt="image">
-                        <div class="feedback-intro">
-                            <h5>Jhon Smith</h5>
-                            <span>City Council Advisor</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
-                <div class="feedback-card">
-                    <i class="flaticon-quotation"></i>
-                    <div class="stars">
-                        <ul>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                        </ul>
-                    </div>
-                    <p>Lorem ipsum dolor amet magna set dolor sit amet elite consectetur adipiscing do elite magna aliqua sit amet dolore adipiscing elite.</p>
-                    <div class="feedback-intro-area">
-                        <img src="assets/images/feedback/f3.jpg" alt="image">
-                        <div class="feedback-intro">
-                            <h5>Peter Smith</h5>
-                            <span>City Council Secretary</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
-                <div class="feedback-card">
-                    <i class="flaticon-quotation"></i>
-                    <div class="stars">
-                        <ul>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                        </ul>
-                    </div>
-                    <p>Lorem ipsum dolor amet magna set dolor sit amet elite consectetur adipiscing do elite magna aliqua sit amet dolore adipiscing elite.</p>
-                    <div class="feedback-intro-area">
-                        <img src="assets/images/feedback/f4.jpg" alt="image">
-                        <div class="feedback-intro">
-                            <h5>Peter Parker</h5>
-                            <span>City Council Secretary</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
-                <div class="feedback-card">
-                    <i class="flaticon-quotation"></i>
-                    <div class="stars">
-                        <ul>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                        </ul>
-                    </div>
-                    <p>Lorem ipsum dolor amet magna set dolor sit amet elite consectetur adipiscing do elite magna aliqua sit amet dolore adipiscing elite.</p>
-                    <div class="feedback-intro-area">
-                        <img src="assets/images/feedback/f5.jpg" alt="image">
-                        <div class="feedback-intro">
-                            <h5>Jack Warner</h5>
-                            <span>City Council Secretary</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
-                <div class="feedback-card">
-                    <i class="flaticon-quotation"></i>
-                    <div class="stars">
-                        <ul>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                        </ul>
-                    </div>
-                    <p>Lorem ipsum dolor amet magna set dolor sit amet elite consectetur adipiscing do elite magna aliqua sit amet dolore adipiscing elite.</p>
-                    <div class="feedback-intro-area">
-                        <img src="assets/images/feedback/f6.jpg" alt="image">
-                        <div class="feedback-intro">
-                            <h5>David Smith</h5>
-                            <span>City Council Secretary</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>

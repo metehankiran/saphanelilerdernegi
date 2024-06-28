@@ -1,17 +1,7 @@
 @extends('layouts.app')
+@section('title', 'Kullanım Koşulları')
 @section('content')
-<section class="uni-banner">
-    <div class="container">
-        <div class="uni-banner-text-area">
-            <h1>Terms & Conditions</h1>
-            <ul>
-                <li><a href="{{ route('home.index') }}">Home</a></li>
-                <li>Terms & Conditions</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
+<x-content.banner title="Kullanım Koşulları" main="Anasayfa" sub="Kullanım Koşulları" :href="route('home.index')" />
 
 <div class="terms ptb-100">
     <div class="container">

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\FAQ;
+use App\Models\Feedback;
 use Illuminate\Http\Request;
 
 class CorporateController extends Controller
@@ -13,7 +15,8 @@ class CorporateController extends Controller
 
     public function testimonials()
     {
-        return view('home.corporate.testimonials');
+        $feedbacks = Feedback::get();
+        return view('home.corporate.testimonials', compact('feedbacks'));
     }
 
     public function privacy()
@@ -28,7 +31,8 @@ class CorporateController extends Controller
 
     public function faq()
     {
-        return view('home.corporate.faq');
+        $faqs = FAQ::where('enabled', true)->get();
+        return view('home.corporate.faq', compact('faqs'));
     }
 
     public function founders()

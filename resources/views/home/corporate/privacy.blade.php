@@ -1,16 +1,7 @@
 @extends('layouts.app')
+@section('title', 'Gizlilik Politikası')
 @section('content')
-<section class="uni-banner">
-    <div class="container">
-        <div class="uni-banner-text-area">
-            <h1>Privacy Policies</h1>
-            <ul>
-                <li><a href="{{ route('home.index') }}">Home</a></li>
-                <li>Privacy Policies</li>
-            </ul>
-        </div>
-    </div>
-</section>
+<x-content.banner title="Gizlilik Politikası" main="Anasayfa" sub="Gizlilik Politikası" :href="route('home.index')" />
 
 
 <div class="terms ptb-100">
